@@ -8,6 +8,7 @@ public class Print {
 	List<String> output=new ArrayList<String>();
 	
 	public Print() {
+		System.out.println("Commit GitHub");
 		Scanner sc=new Scanner(System.in);
 		String[] inputSet= {};
 		System.out.println("Enter the number of input:");
