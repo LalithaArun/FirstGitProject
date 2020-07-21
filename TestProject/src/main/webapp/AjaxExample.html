@@ -1,0 +1,37 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>  
+
+<button id="ajax">ajax call</button>
+<button id="json">json</button>
+
+<script>
+   
+
+    $('#ajax').click(function(){ 
+        alert('ajax');
+         $.ajax({ 
+             type: "GET",
+             headers:{ 
+            	 "Access-Control-Allow-Origin": "*",
+                 "Accept":"application/json",
+                 "Content-Type":"application/json"
+             },
+             dataType: "json",
+             url: "http://localhost:8080/product/getAllViewProducts",
+             success: function(data){        
+                alert(data.productId);
+             }
+         });
+    });
+
+</script>
+
+
+
+</body>
+
+</html>
